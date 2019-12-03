@@ -1,0 +1,17 @@
+{% extends 'head1.html' %}
+
+{% block content %}
+
+<div style="font-size: 9px; text-align: center;"><h1>{{ tekst }}</h1>
+<table><tbody>
+<tr><th>Id</th><th>Data</th><th>Nazwa</th><th>Stara cena</th><th>Cena</th><th>Ilość</th></tr>
+{% for a in gaz reversed %}
+
+         <tr><td>{{ a.id }}</td><td>{{ a.data }}</td><td>{{ a.product }}</td><td>{{ a.oldprice }}</td><td>{{ a.newprice }}</td><td>{{ a.dostepnosc }}</td></tr>
+
+{% endfor %}
+ </tbody></table>
+ 
+ </div> 
+
+{% endblock %}
